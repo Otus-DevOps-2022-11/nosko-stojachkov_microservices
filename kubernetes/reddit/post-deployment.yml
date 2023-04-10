@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ui-deployment
+  name: post-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ui
+      app: post
   template:
     metadata:
-      name: ui
+      name: post
       labels:
-        app: ui
+        app: post
     spec:
       containers:
-      - image: nosko/ui
-        name: ui
+      - image: nosko/post
+        name: post
